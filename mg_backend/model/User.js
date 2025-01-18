@@ -11,6 +11,11 @@ const UserSchema=new Schema({
         type: String,
         required: true
     }
+    ,
+    saved:{
+        type:[String],
+        default: []
+    }
 })
 
 module.exports=mongoose.model('User',UserSchema,'User');

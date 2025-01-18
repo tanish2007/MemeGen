@@ -1,6 +1,6 @@
 const User= require('../model/User')
 const bcrypt = require('bcrypt');
-const { Configuration, OpenAI } = require("openai");
+
 
 exports.createUser= async (req,res,next)=>{
    
@@ -48,26 +48,3 @@ exports.authenticateUser= async (req,res,next)=>{
     }
     
 }
-const openai = new OpenAI({
-    apiKey: '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',
-  });
-
-exports.generateMeme = async (req, res, next) => {
-    console.log("Here meme")
-    const { prompt } = req.body;
-  
-    try {
- 
-      const response = await openai.createImage({
-        prompt: `A meme image with ${prompt}`,
-        n: 1, 
-        size: "512x512", 
-      });
-  
-      const imageUrl = response.data.data[0].url;
-      res.status(200).json({ imageUrl });
-    } catch (error) {
-      console.error("Error generating meme:", error.message);
-      res.status(500).json({ message: "Failed to generate meme." });
-    }
-  };

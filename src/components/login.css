@@ -1,9 +1,7 @@
- 
 .login{
     display: flex;
     justify-content: center;      
- 
-  }
+}
 
 .Heading{
     display: flex;
@@ -25,7 +23,7 @@
 }
 
 .Container{
-    
+
     display: flex;
     justify-content: center;
 }

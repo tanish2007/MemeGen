@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './login.css'
-import {Link} from 'react-router'
+import {Link, useNavigate} from 'react-router'
 import axios from 'axios'
 
 
@@ -8,11 +8,16 @@ import axios from 'axios'
 export default function Login(){
     const [username,setUsername]=useState("")
     const [password,setPassword]=useState("")
+    const navigate = useNavigate()
 
     const AuthenticateAccount = async ()=>{
         const user={username:username,password:password}
         axios.post("http://localhost:8000/authenticateUser",user)
-        .then(res=>console.log(res))
+        .then((res)=>{
+            console.log(res)
+            navigate("/home")
+            localStorage.setItem('username',username)
+        })
         .catch(e=>console.log(e))
     }
     return <>

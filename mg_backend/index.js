@@ -25,3 +25,4 @@ mongoose.connect("mongodb+srv://tanishgupta2007:Pasta%40nashta1@cluster0.5kri1.m
      });
 })
 .catch(e=> console.log(e)); // error in connecting to mongodb   
+
