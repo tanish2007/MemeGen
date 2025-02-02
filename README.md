@@ -14,13 +14,9 @@ An AI-powered meme generator web application that allows users to create persona
 
 
 ## TechStack:
-- **Java** for handling server-side logic and API development.
-- **Database** integration for user credentials and chat history 
-
-## Frontend:
-- **Frontend: ** React.js, Tailwind CSS
-- **Backend: ** Node.js, Express.js
-- **Database: ** MongoDB
-- **APIs Used: ** OpenAI API, Imgflip API
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **APIs Used:** OpenAI API, Imgflip API
 
 
